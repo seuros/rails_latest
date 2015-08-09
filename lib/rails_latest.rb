@@ -15,6 +15,12 @@ module RailsLatest
                                                        "skip_#{filter}_filter":    "use #skip_#{filter}_action")
         end
       end
+      ActionController::RequestForgeryProtection::ClassMethods.class_eval do
+        redefine_method(:protect_from_forgery) do |options = {}|
+          self.request_forgery_protection_token ||= :authenticity_token
+          prepend_before_action :verify_authenticity_token, options
+        end
+      end
     end
   end
 end
