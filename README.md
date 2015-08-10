@@ -18,7 +18,7 @@ Fix all deprecation warnings that will start showing up in your logs
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/seurps/rails_latest.
+Bug reports and pull requests are welcome on GitHub at https://github.com/seuros/rails_latest.
 
 
 ## License
